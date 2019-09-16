@@ -4,4 +4,4 @@
 
 | Alkalom | Leírás |
 |--------:|--------|
-| [0.]() | Bemutatkozás, tematika, technikai információk |
+| [0.](https://github.com/mittelholcz/python2019/blob/master/00.intro/) | Bemutatkozás, tematika, technikai információk |
