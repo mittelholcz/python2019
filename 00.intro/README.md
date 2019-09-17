@@ -38,6 +38,15 @@ amibe írni fogunk:
 - Linux: Gedit, Geany, Kate
 - akinek már van: emacs, vim, akármi...
 
-a kurzus címe:
+További frissítések és telepítések (Ubuntu / Windows Subsystem for Linux):
+
+```sh
+sudo -i
+apt-get update
+apt-get upgrade
+apt-get install python3-pip
+```
+
+kurzusanyagok elérhetősége:
 
 <https://github.com/mittelholcz/python2019>
