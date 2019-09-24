@@ -28,7 +28,7 @@ Shell (rendszerhéj): karakteres felhasználói felület alkalmazások futtatás
 
 ## 2. Történelem
 
-- 1969: UNIX oprendszer. Kezdetben hozzávágják mindenkihez, aki gépet vesz, aztán rájönnek, hogy a szoftver is lehet üzlet $\to$ zárt lesz.
+- 1969: UNIX oprendszer. Kezdetben hozzávágják mindenkihez, aki gépet vesz, aztán rájönnek, hogy a szoftver is lehet üzlet → zárt lesz.
 - 1983: GNU (GNU's Not Unix). UNIX-szerű, de nem tartalmaz UNIX-ból származó kódot (mindent újraimplementálnak nulláról). Open source. Kernel nincs, minden más van (C fordító, debugger és library, shell, make, TeX, ablak kezelő, stb.).
 - 1991: Linux kernel.
 - Azóta:
@@ -47,7 +47,7 @@ ls /home # argumentum / paraméter
 ls -al *rc # wildcard
 ```
 
-Paraméterek:
+Kapcsolók:
 
 - opcionálisak vagy kötelezőek
 - rövidítettek vagy hosszúak (pl. `-a` vagy `--all`)
@@ -86,6 +86,7 @@ Kiemelt könyvárak rövidítései:
 - `.`: jelenlegi könyvtár
 - `..`: szülő könyvtár
 - `/`: gyökér könyvtár
+- `~`: a felhasználó *home* könyvtára
 
 *Wild card* vagy *joker* karakterek:
 
