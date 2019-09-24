@@ -26,7 +26,7 @@ Shell (rendszerhéj): karakteres felhasználói felület alkalmazások futtatás
 - mostanában Linux-ok többségén és OS X-en a bash az alapértelmezett
 - programozási nyelv is
 
-## 2. Törtlnelem
+## 2. Történelem
 
 - 1969: UNIX oprendszer. Kezdetben hozzávágják mindenkihez, aki gépet vesz, aztán rájönnek, hogy a szoftver is lehet üzlet $\to$ zárt lesz.
 - 1983: GNU (GNU's Not Unix). UNIX-szerű, de nem tartalmaz UNIX-ból származó kódot (mindent újraimplementálnak nulláról). Open source. Kernel nincs, minden más van (C fordító, debugger és library, shell, make, TeX, ablak kezelő, stb.).
@@ -38,21 +38,69 @@ Shell (rendszerhéj): karakteres felhasználói felület alkalmazások futtatás
 
 ## 3. Parancsok
 
+Hogy néz ki egy parancs?
 
 ```sh
 ls # sima parancs
-ls -l # kapcsoló
+ls -l # parncs "kapcsolóval"
 ls /home # argumentum / paraméter
 ls -al *rc # wildcard
 ```
 
-paraméterek:
+Paraméterek:
 
-* opcionálisak vagy kötelezőek
-* rövidítettek vagy hosszúak (pl. `-a` vagy `--all`)
-* össze nem vontak vagy összevontak (pl. `-a -l` vagy `-al`) -- ez csak a rövidítettekre működik!
-* értéktelenek vagy értékesek esetleg opcionálisan értékesek (pl. az `ls --color` ugyan az, mint az `ls --color=always`, de nem ugyanaz, mint a `--color=never`).
+- opcionálisak vagy kötelezőek
+- rövidítettek vagy hosszúak (pl. `-a` vagy `--all`)
+- össze nem vontak vagy összevontak (pl. `-a -l` vagy `-al`) -- ez csak a rövidítettekre működik!
+- értéktelenek vagy értékesek esetleg opcionálisan értékesek (pl. az `ls --color` ugyan az, mint az `ls --color=always`, de nem ugyanaz, mint a `ls --color=never`).
 
-kapcsolók
+## 4. Információk
 
-argumentumok
+```sh
+<parancs> -h
+<parancs> --help
+man <parancs>
+```
+
+## 5. Fájlkezelés
+
+A könyvtárak, fájlok közötti szeparátor a perjel (`/`), nem pedig a backslash (`\`), mint windows-ban!
+
+Minden felhasználónak van egy ún. *home* könyvtára, ami a `/home/<felhasználónév>` útvonalon érhető el.
+
+Alapvető parancsok:
+
+- `ls`: könyvtár tartalmának listázása (*list*)
+- `mkdir <könyvtár>`: könyvtár létrehozása (*make directory*)
+- `rmdir <könyvtár>`: könyvtár törlése (csak üres könyvtárra, *remove directory*)
+- `cp <honnan> <hova>`: fájl/könyvtár másolása (*copy*)
+- `mv <mit> <mire>`: fájl/könyvtár átnevezése/mozgatása (*move*)
+- `rm <fájl>`: törlés (*remove*)
+- `pwd`: aktuális könyvtár kiírása
+- `cd <hova>`: aktuális könyvtár váltása (*change directory*)
+- `ln -s <mit> <hova>`: egy *link*-et hoz létre, amin keresztül szintén elérhető lesz a fájl/könyvtár (*symbolic link*)
+- `touch <fájl>`: üres fájl létrehozása
+
+Kiemelt könyvárak rövidítései:
+
+- `.`: jelenlegi könyvtár
+- `..`: szülő könyvtár
+- `/`: gyökér könyvtár
+
+*Wild card* vagy *joker* karakterek:
+
+- `?` egy tetszőleges karakter helyett állhat
+- `*` bárhány bármi helyett állhat
+- `[chars]`: a szögletes zárójelben megadott karakterek valamelyike helyett állhat, tartomány is használható (pl. `[A-Z]` egy nagybetűt helyettesíthet)
+
+Egy fájlt / könyvtárat meg lehet adni abszolút és relatív módon is:
+
+- *abszolút*: a gyökértől
+- *relatív*: az aktuális könyvtártól
+
+### Feladatok
+
+1. Hozzunk létre a *home*-unkban egy `tmp/` könyvtárat!
+1. Hozzunk létre a `tmp`-n belül egy `src/` könyvtárat, amiben kettő .txt és egy .py fájl van.
+1. Másoljuk át a .txt fájlokat a `trg/` könyvtárba.
+1. Töröljük ki az `src/` könyvátrat.
