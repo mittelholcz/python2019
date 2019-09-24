@@ -185,40 +185,7 @@ ls | wc
 
 Speciális fájl a `/dev/null`, ami minden adatot "elnyel". Pl. a `command 2>/dev/null` minden hibaüzenetet eltüntet, csak a "rendes" kimenet lesz olvasható.
 
-## 7. Stringmanipuláció
+### 7. Ajánlott irodalom
 
-Keresés:
-
-`grep <kifejezés>`: Fájl vagy a stdin szűrése, a kifejezést tartalmazó sorokra.
-
-- `-i`: ignore case
-- `-v`: fordított működés - a nem illeszkedő sorokat átengedi, az illeszkedőket kiszűri
-- `-r <könyvtár>`: rekurívan keres a könyvtár minden alkönyvtárjában
-
-Csere:
-
-`sed "s/mit/mire/g"`: Kifejezés keresése és cseréje fájlban vagy stdin-en.
-
-Rendezés:
-
-`sort`: Rendezés.
-
-- `-n`: numerikus rendezés (a default lexikális helyett, pl. 10 > 9)
-- `-r`: fordított sorrend
-
-Egyelés:
-
-`uniq`: Sorok egyelése. Csak az egymást követő azonos sorokat egyeli, ezért előtte szükséges lehet rendezni.
-
-- `-c`: a sorok elé írja, hány darab volt belőlük
-
-### Feladat
-
-Csináljunk szógyakorisági listát a tmp könyvtárunkban lévő fájlokból.
-
-- segítség: sortörést a `\n` karktersorozattal lehet helyettesíteni
-
-### 8. Ajánlott irodalom
-
-- Software Carpentry: [The Unix Shell](http://swcarpentry.github.io/shell-novice/)
-- [Bash dokumentáció](https://www.gnu.org/software/bash/manual/)
+- Software Carpentry: [The Unix Shell](http://swcarpentry.github.io/shell-novice/)- kezdőknek is jó tutorial
+- [Bash dokumentáció](https://www.gnu.org/software/bash/manual/) - nagyon részletes, de ha tudjátok mit kerestek, hasznos lehet
