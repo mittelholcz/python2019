@@ -95,7 +95,6 @@ Egy karakterre illesztés:
 - `[ ]`: a zárójelen belül felsorolt karakterek valamelyikére illeszkedik, pl. `[ab]` illeszkedik az `a` vagy a `b` karakterre, másra nem.
   - Megadható tartomány is, pl `[a-z]` illeszkedik az ASCII kisbetűkre, `[0-9]` pedig a számjegyekre.
   - Ha a kötőjelet is be akarjuk venni a felsorolt karakterek közé, akkor a felsorolás elejére vagy végére kell írni.
-  - Ha szögletes záró zárójelet akarunk a felsorolásba foglalni, akkor azt közvetlenül a nyitó után kell tenni.
   - A szögletes zárójelen belül más karakterek elveszítik speciális jelentésüket, pl. `[.]` egy literális pontra illeszkedik, nem pedig bármire.
 - `[^ ]` illeszkedik a zárójelen belül fel nem sorolt karakterek valamelyikére. Megadható tartomány is, pl. `[^A-Z0-9]` illeszkedik minden karakterre, ami nem ASCII nagybetű és nem is számjegy.
 
@@ -130,6 +129,7 @@ Egy-egy reguláris nyelv általában sokféleképpen megadhatók regexekkel (pl.
 - Hány szó kezdődik *a*-val egy listában?
 - Hány szó kezdődik *a*-val folyó szövegben?
 - Hány három betűs szó van a szövegben?
+- Hány zárójelpár van a szövegben?
 - Írjunk *grep* parancsot, ami alkalmas egy szövegben található szóismétlések szűrésére!
 - Írjunk *sed* parancsot, ami a bemenetének minden szavát megismételteti! (pl. *Hát maga megbolondult?* $\to$ *Hát Hát maga maga megbolondult megbolondult?*)
 - Készítsünk megint szógyakorisági listát egy szövegből, de most dobjuk ki a punktuációkat is, azaz az 'alma', az 'alma!' és az 'alma)' egyaránt az 'alma' type gyakoriságát növelje!
