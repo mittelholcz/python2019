@@ -1,13 +1,3 @@
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-
-<!-- The loading of KaTeX is deferred to speed up page rendering -->
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-
-<!-- To automatically render math in text elements, include the auto-render extension: -->
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-
 # Reguláris kifejezések
 
 (2019. 10. 01. - 2. óra)
@@ -51,20 +41,24 @@ Csináljunk szógyakorisági listát a tmp könyvtárunkban lévő fájlokból.
 
 ## Reguláris kifejezések elmélete
 
-\\(\sum\\) : az ábécé (karakterek nem üres, véges halmaza)
+ábécé: karakterek nem üres, véges halmaza
 
-\\(string\\): $\sum$ karaktereiből álló véges sorozat
+string: az ábécé karaktereiből álló véges sorozat
 
-\\(\varepsilon\\): üres string
+üres string: nulla hosszúságú string
 
-\\(\sum^\ast\\) : \\(\sum\\) feletti összes string halmaza ($\sum$ Kleene-lezárása)
+Kleene-csillag (v. lezárt): az ábécé feletti összes string halmaza
 
-\\(nyelv\\): \\(\sum^\ast\\) egy részhalmaza
+nyelv: Kleene-lezárt egy részhalmaza
 
-\\(reguláris\ kifejezés\\): Stringek egy halmazát határozza meg (egy *reguláris nyelvet*). Tartalmazhat literális karaktereket ill. az alábbi műveleti jeleket.
+reguláris kifejezés: Stringek egy halmazát határozza meg (egy *reguláris nyelvet*). Tartalmazhat literális karaktereket ill. az alábbi műveleti jeleket.
 
 Műveletek:
 
-- Konkatenáció: $R^1$ és $R^2$ reguláris kifejezés, ekkor $R^1R^2$ is regularis kifejezés és $R^1R^2 = \{\alpha\beta \ :\ \alpha \in R^1\ és\ \beta \in R^2\}$.
-- Unió: $R^1$ és $R^2$ reguláris kifejezés, ekkor $R^1\mid R^2$ is regularis kifejezés és $R^1\mid R^2 = \{\alpha\ :\ \alpha \in R^1\ vagy\ \alpha \in R^2\}$.
-- Kleene csillag: $R$ reguláris kifejezés, ekkor $R^\ast$ is regularis kifejezés és, mely tartalmazza az üres stringet ($\varepsilon$) és $R$ elemeinek tetszőleges konkatenációját.
+- Konkatenáció: *R1* és *R2* reguláris kifejezés, ekkor *R1R2* is regularis
+  kifejezés és *R1R2* = {*ab* : *a* eleme *R1* és *b* eleme *R2*}.
+- Unió: *R1* és *R2* reguláris kifejezés, ekkor *R1 unió R2* is regularis
+  kifejezés és *R1 unió R2* = {*a* : *a* eleme *R1* vagy *a* eleme *R2*}.
+- Kleene csillag: *R* reguláris kifejezés, ekkor *R\** is reguláris
+  kifejezés, mely tartalmazza az üres stringet és *R* elemeinek tetszőleges
+  konkatenációját.
