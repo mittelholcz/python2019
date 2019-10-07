@@ -1,0 +1,3 @@
+# Programozás, típusok, értékadás
+
+valami
