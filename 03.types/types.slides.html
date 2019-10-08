@@ -13208,6 +13208,265 @@ a.anchor-link {
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-Mi-a-programoz&#225;s?">1. Mi a programoz&#225;s?<a class="anchor-link" href="#1.-Mi-a-programoz&#225;s?">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Egy algoritmus implementálása egy programozási nyelven.</p>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Mi-egy-algoritmus?">Mi egy algoritmus?<a class="anchor-link" href="#Mi-egy-algoritmus?">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Megengedett műveleteket tartalmazó eljárás, ami megold egy problémát.</p>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Mik-a-megengedett-m&#369;veletek?">Mik a <em>megengedett m&#369;veletek</em>?<a class="anchor-link" href="#Mik-a-megengedett-m&#369;veletek?">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Összetett feladat megoldása: felbontás egyszerűbb részfeladatokra, amíg olyan feladatokhoz nem jutunk, amiket már meg tudunk oldani (a nyelvben benne van)</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>I/O (input, output): általában nem része az algoritmusnak, de része a programnak </li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-Hogyan-futtatunk-egy-programot?">2. Hogyan futtatunk egy programot?<a class="anchor-link" href="#2.-Hogyan-futtatunk-egy-programot?">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A gép gépi nyelven ért $\to$ a programot át kell alakítani gépi nyelvre.</p>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Ford&#237;t&#225;s-&#233;s-&#233;rtelmez&#233;s">Ford&#237;t&#225;s &#233;s &#233;rtelmez&#233;s<a class="anchor-link" href="#Ford&#237;t&#225;s-&#233;s-&#233;rtelmez&#233;s">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Fordítás:</p>
+<ul>
+<li>a forráskódból egy bináris fájlt állít elő, ami érthető a gépnek</li>
+<li>a fordítóra ezután nincs szükség, a bináris nélküle is futtatható</li>
+<li>a bináris fájl architektúra- és platformfüggő</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Értelmezés:</p>
+<ul>
+<li>a forráskódot <em>tolmácsolja</em> a gépnek, nem hoz létre új fájlt</li>
+<li>az értelmezőre minden futtatásnál szükésg van</li>
+<li>architektúra- és platformfüggőség?</li>
+</ul>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Futtat&#225;s-unix-szer&#369;-k&#246;rnyezetben">Futtat&#225;s unix-szer&#369; k&#246;rnyezetben<a class="anchor-link" href="#Futtat&#225;s-unix-szer&#369;-k&#246;rnyezetben">&#182;</a></h2><p>Értelmezett nyelvek:</p>
+<div class="highlight"><pre><span></span>interpreter fájl
+</pre></div>
+<p>Például:</p>
+<div class="highlight"><pre><span></span>bash myscript.sh
+python myscript.py
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Mi-t&#246;rt&#233;nik-a-fut&#225;s-sor&#225;n?">3. Mi t&#246;rt&#233;nik a fut&#225;s sor&#225;n?<a class="anchor-link" href="#3.-Mi-t&#246;rt&#233;nik-a-fut&#225;s-sor&#225;n?">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>program a háttértáron (merevlemez, ssd, stb)</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>beolvasás a memóriába (RAM)<ul>
+<li>utasítások</li>
+<li>adatok</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>futtatás: a processzor végrehajtja az utasításokat az adatokon</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>kilépés, a memória felszabadíthatóvá válik</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.-Mik-a-t&#237;pusok?">4. Mik a t&#237;pusok?<a class="anchor-link" href="#4.-Mik-a-t&#237;pusok?">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Egyszer&#369;-adatt&#237;pusok">Egyszer&#369; adatt&#237;pusok<a class="anchor-link" href="#Egyszer&#369;-adatt&#237;pusok">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong>bool</strong><ul>
+<li><code>True</code> vagy <code>False</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong>int</strong><ul>
+<li>egész számok</li>
+<li>műveletek: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong>float</strong><ul>
+<li>tizedes törtek</li>
+<li>műveletek: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong>complex</strong><ul>
+<li>komplex számok</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong>str</strong><ul>
+<li>stringek</li>
+<li>műveletek: <code>+</code>, <code>*</code>, stb</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#214;sszetett-adatt&#237;pusok">&#214;sszetett adatt&#237;pusok<a class="anchor-link" href="#&#214;sszetett-adatt&#237;pusok">&#182;</a></h2>
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
