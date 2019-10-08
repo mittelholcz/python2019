@@ -20,6 +20,3 @@ Vázlat:
         - adatok
     - kód futtatása: az adatokon a processzor elvégzi az utasításokat
     - kilépés a programból, a memória felszabadíthatóvá válik
-1. Hogyan adjunk egy változónak értéket?
-    - az egyenlőségjel nem állítás, hanem utasítás (nem "*a* egyenlő *b*-vel", hanem "*a* **legyen** egyenlő *b*-vel")
-1. Mik a főbb típusok pythonban? Mik ezek metódusai? Mik a műveletek? Mik a függvények? Mik a paraméterek? Megannyi kérdés!
