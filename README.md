@@ -8,3 +8,4 @@
 | [1.](https://github.com/mittelholcz/python2019/blob/master/01.shell/) | A parancssor használatának alapjai |
 | [2.](https://github.com/mittelholcz/python2019/blob/master/02.regex/) | Reguláris kifejezések |
 | [3.](https://github.com/mittelholcz/python2019/blob/master/03.prog/) | Programozás, futtatás |
+| [4.](https://github.com/mittelholcz/python2019/blob/master/04.types/) | Adattípusok |
