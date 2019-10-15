@@ -13377,6 +13377,108 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="5.-Egyszer&#369;-adatt&#237;pusok">5. Egyszer&#369; adatt&#237;pusok<a class="anchor-link" href="#5.-Egyszer&#369;-adatt&#237;pusok">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Igazs&#225;g&#233;rt&#233;k-(boolean)">Igazs&#225;g&#233;rt&#233;k (<em>boolean</em>)<a class="anchor-link" href="#Igazs&#225;g&#233;rt&#233;k-(boolean)">&#182;</a></h2><ul>
+<li>lehetséges értékek: <code>True</code> vagy<code>False</code></li>
+<li>műveletek: <code>and</code>, <code>or</code>, <code>not</code></li>
+<li>kapcsolódó függvények: <code>bool()</code></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Eg&#233;sz-sz&#225;mok-(integer)">Eg&#233;sz sz&#225;mok (<em>integer</em>)<a class="anchor-link" href="#Eg&#233;sz-sz&#225;mok-(integer)">&#182;</a></h2><ul>
+<li>lehetséges értékek: ~</li>
+<li>műveletek: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>**</code>, <code>&lt;</code>, <code>&lt;=</code> <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, <code>!=</code></li>
+<li>kapcsolódó függvények: <code>int()</code>, <code>bin()</code>, <code>oct()</code>, <code>hex()</code></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lebeg&#337;pontos-sz&#225;mok-(float)">Lebeg&#337;pontos sz&#225;mok (<em>float</em>)<a class="anchor-link" href="#Lebeg&#337;pontos-sz&#225;mok-(float)">&#182;</a></h2><ul>
+<li>lehetséges értékek: tizedestörtek</li>
+<li>műveletek: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>**</code>, <code>&lt;</code>, <code>&lt;=</code> <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, <code>!=</code></li>
+<li>kapcsolódó függvények: <code>float()</code>, <code>round()</code></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Karakterl&#225;ncok-(string)">Karakterl&#225;ncok (<em>string</em>)<a class="anchor-link" href="#Karakterl&#225;ncok-(string)">&#182;</a></h2><ul>
+<li>lehetséges értékek: ~</li>
+<li>jelölés: <code>'valami'</code> vagy <code>"valami"</code></li>
+<li>műveletek: <code>+ &lt;string&gt;</code>, <code>* &lt;int&gt;</code>, <code>&lt;</code>, <code>&lt;=</code> <code>&gt;</code>, <code>&gt;=</code></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Karakterl&#225;ncok-indexel&#233;se,-szeletel&#233;se">Karakterl&#225;ncok indexel&#233;se, szeletel&#233;se<a class="anchor-link" href="#Karakterl&#225;ncok-indexel&#233;se,-szeletel&#233;se">&#182;</a></h2><ul>
+<li><code>s[i]</code>: <code>s</code> karakterlánc <code>i</code>-edik karaktere</li>
+<li><code>s[:i]</code>: <code>i</code>-edik karakterig az összes, <code>i</code> már nem (substring)</li>
+<li><code>s[i:]</code>: <code>i</code>-edik karaktertől az összes, <code>i</code> is (substring)</li>
+<li><code>s[i:j]</code>: <code>i</code>-edik karaktertől a <code>j</code>-edikig, <code>i</code>-edik benne van <code>j</code>-edik már nincs (substring)</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Karakterl&#225;ncok-met&#243;dusai">Karakterl&#225;ncok met&#243;dusai<a class="anchor-link" href="#Karakterl&#225;ncok-met&#243;dusai">&#182;</a></h2><ul>
+<li><code>s.upper()</code>: nagybetűsít</li>
+<li><code>s.lower()</code>: kisbetűsít</li>
+<li><code>s.endswith(suffix)</code>: igaz, suffixszel végződik a string</li>
+<li><code>s.startswith(prefix)</code>: igaz, prefixszel kezdődik a string</li>
+<li><code>s.isdigit()</code>: igaz, ha <code>s</code> csak számjegyeket tartalmaz</li>
+<li><code>s.isalpha()</code>: igaz, ha <code>s</code> csak betűket tartalmaz</li>
+<li><code>s.isspace()</code>: igaz, ha <code>s</code> csak szóközjellegű karaktereket tartalmaz</li>
+<li><code>s.strip()</code>: levágja a string elején és végén lévő szóközjellegű karaktereket<ul>
+<li>a <code>s.strip(karakterek)</code> levágja szóközök helyett a felsorolt karaktereket vágja le</li>
+<li>az <code>lstrip()</code>, és az <code>rstrip()</code> csak a bal- ill. jobboldaliakat vágja le</li>
+</ul>
+</li>
+<li><code>s.split(delimiter)</code>: felszeleteli a stringet delimiterek mentén, a szeletek listáját adja vissza<ul>
+<li>a <code>s.split()</code> a szóközjellegű karaktereket mentén darabol</li>
+</ul>
+</li>
+<li><code>s.replace(mit, mire)</code>: lecseréli a stringben az elsőként megadott paraméter előfordulásait a második paraméterre</li>
+</ul>
+<p>Továbbiak: <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">https://docs.python.org/3/library/stdtypes.html#string-methods</a></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="6.-&#214;sszetett-adatt&#237;pusok">6. &#214;sszetett adatt&#237;pusok<a class="anchor-link" href="#6.-&#214;sszetett-adatt&#237;pusok">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="V&#233;ge!">V&#233;ge!<a class="anchor-link" href="#V&#233;ge!">&#182;</a></h1>
 </div>
 </div>
