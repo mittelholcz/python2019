@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>comp slides</title>
+<title>ctrl slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13202,8 +13202,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#214;sszetett-adatt&#237;pusok">&#214;sszetett adatt&#237;pusok<a class="anchor-link" href="#&#214;sszetett-adatt&#237;pusok">&#182;</a></h1><hr>
-<p>(2019. 10. 21. – 5. óra)</p>
+<h1 id="Vez&#233;rl&#233;si-szerkezetek">Vez&#233;rl&#233;si szerkezetek<a class="anchor-link" href="#Vez&#233;rl&#233;si-szerkezetek">&#182;</a></h1><hr>
+<p>(2019. 10. 28. – 6. óra)</p>
 <p>Mittelholcz Iván</p>
 
 </div>
@@ -13212,42 +13212,10 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1.-Rendezett-sorozatok-(tuple)">1. Rendezett sorozatok (<em>tuple</em>)<a class="anchor-link" href="#1.-Rendezett-sorozatok-(tuple)">&#182;</a></h1><ul>
-<li>objektumreferenciák rendezett sorozata<ul>
-<li>nem magukat az objektumokat tárol, hanem objektumokra való hivatkozásokat</li>
-<li>nem változtatható (<em>immutable</em>)</li>
-</ul>
-</li>
-<li>jelölés: <code>(x1, x2, ...)</code></li>
-<li>indexelhető (<code>t[i]</code>) és szeletelhető (<code>t[i:j]</code>, ill. <code>t[i:j:k]</code>) a <em>string</em>ekhez hasonlóan</li>
-<li>kapcsolódó függvények: <code>tuple()</code>, <code>len()</code>, <code>min()</code>, <code>max()</code>, <code>sum()</code>, <code>all()</code>, <code>any()</code>, <code>sorted()</code></li>
-<li>műveletek: <code>+</code>, <code>*</code>, <code>in</code>, <code>not in</code></li>
-<li>metódusok: <code>t.index(x)</code>, <code>t.count(x)</code></li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="2.-List&#225;k-(list)">2. List&#225;k (<em>list</em>)<a class="anchor-link" href="#2.-List&#225;k-(list)">&#182;</a></h1><ul>
-<li>ugyan az, mint a <em>tuple</em>, csak változtatható (<em>mutable</em>)</li>
-<li>jelölés: <code>[x1, x2, ...]</code></li>
-<li>kapcsolódó függvények: <code>list()</code></li>
-<li>további műveletek: <code>l[i] = x</code>, <code>l[i:j] = [...]</code>, <code>del l[i]</code>, <code>del l[i:j]</code></li>
-<li>további metódusok: <code>l.append(x)</code>, <code>l.pop()</code>, <code>l.insert(x)</code>, <code>l.remove(x)</code>, <code>l.sort()</code></li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Feladat">Feladat<a class="anchor-link" href="#Feladat">&#182;</a></h1><ol>
-<li>bontsunk fel egy szöveget szavak listájára</li>
-<li>rendezzük a listát ábécé sorrendbe</li>
+<h1 id="Bevezet&#337;">Bevezet&#337;<a class="anchor-link" href="#Bevezet&#337;">&#182;</a></h1><ol>
+<li>szekvencia</li>
+<li>elágazás</li>
+<li>ciklus</li>
 </ol>
 
 </div>
@@ -13256,18 +13224,60 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3.-Halmazok-(set)">3. Halmazok (<em>set</em>)<a class="anchor-link" href="#3.-Halmazok-(set)">&#182;</a></h1><ul>
-<li>objektumreferenciák halmaza<ul>
-<li>minden értéket csak egyszer tárol</li>
-<li>sorrend nem számít</li>
-<li>változtatható (<em>mutable</em>)</li>
-</ul>
-</li>
-<li>jelölés: <code>{x1, x2, ...}</code></li>
-<li>nem indexelhető!</li>
-<li>kapcsolódó függvények: <code>set()</code>, <code>len()</code>, <code>min()</code>, <code>max()</code>, <code>sum()</code>, <code>all()</code>, <code>any()</code>, <code>sorted()</code></li>
-<li>műveletek: <code>in</code>, <code>not in</code>, <code>s1 | s2</code>, <code>s1 &amp; s2</code>, <code>s1 - s2</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>,  <code>&gt;=</code> </li>
-<li>metódusok: <code>s.add(x)</code>, <code>s.remove(x)</code>, <code>s.discard(x)</code>, <code>s.pop()</code></li>
+<h1 id="1.-Szekvencia">1. Szekvencia<a class="anchor-link" href="#1.-Szekvencia">&#182;</a></h1><p>Utasítások egymásutánja:</p>
+<div class="highlight"><pre><span></span><span class="n">utasitas1</span><span class="p">()</span>
+<span class="n">utasitas2</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.-El&#225;gaz&#225;s">2. El&#225;gaz&#225;s<a class="anchor-link" href="#2.-El&#225;gaz&#225;s">&#182;</a></h1><p>Feltétel teljesülése esetén az egyik, nem teljesülése esetén egy másik utasítás fut le:</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">ch</span> <span class="ow">in</span> <span class="s1">&#39;aeiou&#39;</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;mgh&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;msh&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.-El&#225;gaz&#225;s-(folytat&#225;s)">2. El&#225;gaz&#225;s (folytat&#225;s)<a class="anchor-link" href="#2.-El&#225;gaz&#225;s-(folytat&#225;s)">&#182;</a></h1><p>Az <code>else</code> ág opcionális (ha a feltétel nem teljesül, nem történik semmi):</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">uj_fizetes</span> <span class="o">&gt;</span> <span class="mi">147000</span><span class="p">:</span>
+    <span class="n">allast_valtok</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lehet kettőnél több ágat is bevezetni:</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">ch</span> <span class="ow">in</span> <span class="s1">&#39;aeiou&#39;</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;mgh&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">ch</span> <span class="ow">in</span> <span class="s1">&#39;bcdfghjklmnpqrstvwxyz&#39;</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;msh&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;nem betű&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.-Ciklus">3. Ciklus<a class="anchor-link" href="#3.-Ciklus">&#182;</a></h1><p>Ugyan azt az utasítás sokszor hajtjuk végre:</p>
+<ul>
+<li>amíg egy feltétel teljesül (<code>while</code>)</li>
+<li>egy gyűjteményes adattípus minden elemére (<code>for</code>)</li>
 </ul>
 
 </div>
@@ -13276,9 +13286,70 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Feladat">Feladat<a class="anchor-link" href="#Feladat">&#182;</a></h1><ol>
-<li>bontsunk fel egy szöveget szavak listájára</li>
-<li>milyen szavak szerepelnek a szövegben?</li>
+<h1 id="3.-Ciklus-(while)">3. Ciklus (<em>while</em>)<a class="anchor-link" href="#3.-Ciklus-(while)">&#182;</a></h1><p><br></p>
+<div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">fizetes</span> <span class="o">&lt;</span> <span class="mi">200000</span><span class="p">:</span>
+    <span class="n">allast_keresek</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hasznosabb változat:</p>
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.-Ciklus-(for)">3. Ciklus (<em>for</em>)<a class="anchor-link" href="#3.-Ciklus-(for)">&#182;</a></h1><p>Lista / tuple / halmaz bejárása:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">container</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Szótár kulcsainak bejárása:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">mydict</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">mydict</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Szótár kulcs-érték párjainak bejárása:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">mydict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><ol>
+<li>Keressük meg egy szöveg leghosszabb szavát!</li>
+<li>Legyen egy egész számokat tartalmazó listánk. Növeljük meg a lista minden elemét eggyel!</li>
+<li>Egy szöveget bontsunk szavakra. Töröljük az 'a'-val kezdődő szavakat.<ul>
+<li>alakítsuk vissza a maradék listát szöveggé (l. <a href="https://docs.python.org/3/library/stdtypes.html#str.join"><code>str.join()</code></a>)</li>
+</ul>
+</li>
 </ol>
 
 </div>
@@ -13287,29 +13358,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="4.-Sz&#243;t&#225;rak-(dict)">4. Sz&#243;t&#225;rak (<em>dict</em>)<a class="anchor-link" href="#4.-Sz&#243;t&#225;rak-(dict)">&#182;</a></h1><ul>
-<li>Kulcs-érték párok halmaza<ul>
-<li>minden kulcsnak egyedinek kell lennie</li>
-<li>a kulcsoknak változtathatatlanoknak kell lenniök</li>
-<li>sorrend nem számít</li>
-<li>maga a szótár változtatható (<em>mutable</em>)</li>
-</ul>
-</li>
-<li>jelölés: <code>{k1: v1, k2: v2, ...}</code></li>
-<li>indexelhető kulccsal, de nem sorszámmal: <code>d[k]</code></li>
-<li>nem szeletelhető!</li>
-<li>kapcsolódó függvények: <code>dict()</code>, <code>len()</code>, <code>min()</code>, <code>max()</code>, <code>sum()</code>, <code>all()</code>, <code>any()</code>, <code>sorted()</code></li>
-<li>műveletek: <code>key in d</code>, <code>key not in d</code>, <code>d[k] = v</code>, <code>del d[k]</code></li>
-<li>metódusok: <code>d.get(k)</code>, <code>d.keys()</code>, <code>d.values()</code>, <code>d.items()</code></li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="M&#225;r-megint-v&#233;ge-az-&#243;r&#225;nak!">M&#225;r megint v&#233;ge az &#243;r&#225;nak!<a class="anchor-link" href="#M&#225;r-megint-v&#233;ge-az-&#243;r&#225;nak!">&#182;</a></h1>
+<h1 id="De-j&#243;-lenne,-ha-ma-eljutn&#225;nk-id&#225;ig!">De j&#243; lenne, ha ma eljutn&#225;nk id&#225;ig!<a class="anchor-link" href="#De-j&#243;-lenne,-ha-ma-eljutn&#225;nk-id&#225;ig!">&#182;</a></h1>
 </div>
 </div>
 </div></section></section>

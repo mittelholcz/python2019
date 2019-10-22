@@ -10,3 +10,4 @@
 | [3.](https://github.com/mittelholcz/python2019/blob/master/03.prog/) | Programozás, futtatás |
 | [4.](https://github.com/mittelholcz/python2019/blob/master/04.types/) | Értékadás, egyszerű adattípusok |
 | [5.](https://github.com/mittelholcz/python2019/blob/master/05.comp/) | Összetett adattípusok |
+| [6.](https://github.com/mittelholcz/python2019/blob/master/06.ctrl/) | Vezérlési szerkezetek |
