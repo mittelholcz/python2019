@@ -13203,7 +13203,7 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Vez&#233;rl&#233;si-szerkezetek">Vez&#233;rl&#233;si szerkezetek<a class="anchor-link" href="#Vez&#233;rl&#233;si-szerkezetek">&#182;</a></h1><hr>
-<p>(2019. 10. 28. – 6. óra)</p>
+<p>(2019. 11. 05. – 6. óra)</p>
 <p>Mittelholcz Iván</p>
 
 </div>
@@ -13276,8 +13276,8 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="3.-Ciklus">3. Ciklus<a class="anchor-link" href="#3.-Ciklus">&#182;</a></h1><p>Ugyan azt az utasítás sokszor hajtjuk végre:</p>
 <ul>
-<li>amíg egy feltétel teljesül (<code>while</code>)</li>
-<li>egy gyűjteményes adattípus minden elemére (<code>for</code>)</li>
+<li>amíg egy feltétel teljesül: <code>while</code></li>
+<li>egy gyűjteményes adattípus minden elemére: <code>for</code></li>
 </ul>
 
 </div>
@@ -13286,7 +13286,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3.-Ciklus-(while)">3. Ciklus (<em>while</em>)<a class="anchor-link" href="#3.-Ciklus-(while)">&#182;</a></h1><p><br></p>
+<h1 id="3.1.-while-ciklus">3.1. <em>while</em>-ciklus<a class="anchor-link" href="#3.1.-while-ciklus">&#182;</a></h1><p>Álláskeresés:</p>
 <div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">fizetes</span> <span class="o">&lt;</span> <span class="mi">200000</span><span class="p">:</span>
     <span class="n">allast_keresek</span><span class="p">()</span>
 </pre></div>
@@ -13297,7 +13297,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Hasznosabb változat:</p>
+<p>Számok kiírása:</p>
 <div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -13310,7 +13310,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3.-Ciklus-(for)">3. Ciklus (<em>for</em>)<a class="anchor-link" href="#3.-Ciklus-(for)">&#182;</a></h1><p>Lista / tuple / halmaz bejárása:</p>
+<h1 id="3.2.-for-ciklus">3.2. <em>for</em>-ciklus<a class="anchor-link" href="#3.2.-for-ciklus">&#182;</a></h1><p>Lista / tuple / halmaz bejárása:</p>
 <div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">container</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
@@ -13344,13 +13344,35 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><ol>
-<li>Keressük meg egy szöveg leghosszabb szavát!</li>
 <li>Legyen egy egész számokat tartalmazó listánk. Növeljük meg a lista minden elemét eggyel!</li>
-<li>Egy szöveget bontsunk szavakra. Töröljük az 'a'-val kezdődő szavakat.<ul>
-<li>alakítsuk vissza a maradék listát szöveggé (l. <a href="https://docs.python.org/3/library/stdtypes.html#str.join"><code>str.join()</code></a>)</li>
-</ul>
-</li>
+<li>Legyen egy számokat tartalmazó listánk. Adjuk össze az elemeit!</li>
+<li>Legyen egy számokat tartalmazó listánk. Mennyi a számok átlaga?</li>
+<li>Legyen egy szavakat tartalmazó listánk. Mekkora az átlagos szóhossz?</li>
 </ol>
+<hr>
+<ol>
+<li>Legyen egy szavakat tartalmazó listánk. Hány szó kezdődik 'a'-val?</li>
+<li>Legyen egy szavakat tartalmazó listánk. Hány szó kezdődik magánhangzóval?</li>
+</ol>
+<hr>
+<ol>
+<li>Legyen egy szavakat tartalmazó listánk. Mely szavak kezdődnek 'a'-val? </li>
+<li>Legyen egy szavakat tartalmazó listánk. Mely szavak kezdődnek magánhangzóval?</li>
+</ol>
+<hr>
+<ol>
+<li>Legyen egy szövegünk. Melyik a leghosszabb szava?</li>
+<li>Legyen egy szövegünk. Melyik a legtöbbféle betűt tartalmazó szava?</li>
+<li>Legyen egy szövegünk. Melyik a leghosszabb, magánhangzóval kezdődő szó?</li>
+</ol>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="+1-feladat">+1 feladat<a class="anchor-link" href="#+1-feladat">&#182;</a></h1><p>Mi a közös a fenti feladatcsoportokban?</p>
 
 </div>
 </div>
