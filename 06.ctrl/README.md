@@ -98,6 +98,26 @@ for k, v in mydict.items():
     print(k, v)
 ```
 
+### 3.3. *continue*, *break*
+
+`continue`: Ugrás a ciklus következő lépésére
+
+```py
+for word in 'alma alma piros alma'.split():
+    if word.startswith('a'):
+        continue
+    print(word)
+```
+
+`break`: kilépés a ciklusból
+
+```py
+for word in 'alma alma piros alma'.split():
+    if word == 'piros':
+        break
+    print(word)
+```
+
 ## Feladatok
 
 1. Legyen egy egész számokat tartalmazó listánk. Növeljük meg a lista minden elemét eggyel!
@@ -112,7 +132,7 @@ for k, v in mydict.items():
 
 ---
 
-1. Legyen egy szavakat tartalmazó listánk. Mely szavak kezdődnek 'a'-val? 
+1. Legyen egy szavakat tartalmazó listánk. Mely szavak kezdődnek 'a'-val?
 1. Legyen egy szavakat tartalmazó listánk. Mely szavak kezdődnek magánhangzóval?
 
 ---
@@ -121,6 +141,10 @@ for k, v in mydict.items():
 1. Legyen egy szövegünk. Melyik a legtöbbféle betűt tartalmazó szava?
 1. Legyen egy szövegünk. Melyik a leghosszabb, magánhangzóval kezdődő szó?
 
-### +1 feladat
+### További feladatok
 
-Mi a közös a fenti feladatcsoportokban?
+- Mi a közös a fenti feladatcsoportokban?
+- Legyen egy egész számokat tartalmazó listánk. Növeljük meg a lista minden elemét eggyel!
+- Legyen egy szövegünk. Számoljunk szógyakoriságot. Az eredményt tároljuk egy szótárban (`{szó: előfordulás}`).
+  - Próbáljuk meg kiiratni a szótár elemeit gyakoriság szerint csökkenő sorrendben!
+  - Írjuk ki a relatív gyakoriságot!
