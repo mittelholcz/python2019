@@ -120,7 +120,6 @@ for word in 'alma alma piros alma'.split():
 
 ## Feladatok
 
-1. Legyen egy egész számokat tartalmazó listánk. Növeljük meg a lista minden elemét eggyel!
 1. Legyen egy számokat tartalmazó listánk. Adjuk össze az elemeit!
 1. Legyen egy számokat tartalmazó listánk. Mennyi a számok átlaga?
 1. Legyen egy szavakat tartalmazó listánk. Mekkora az átlagos szóhossz?
