@@ -13242,7 +13242,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1.1.-F&#252;ggv&#233;ny-defin&#237;ci&#243;ja">1.1. F&#252;ggv&#233;ny defin&#237;ci&#243;ja<a class="anchor-link" href="#1.1.-F&#252;ggv&#233;ny-defin&#237;ci&#243;ja">&#182;</a></h1><p><br></p>
+<h1 id="F&#252;ggv&#233;ny-defin&#237;ci&#243;ja">F&#252;ggv&#233;ny defin&#237;ci&#243;ja<a class="anchor-link" href="#F&#252;ggv&#233;ny-defin&#237;ci&#243;ja">&#182;</a></h1><p><br></p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">paramX</span><span class="p">):</span>
     <span class="o">&lt;</span><span class="n">utasitas1</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="n">utasitas2</span><span class="o">&gt;</span>
@@ -13263,7 +13263,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1.2.-F&#252;ggv&#233;ny-h&#237;v&#225;sa">1.2. F&#252;ggv&#233;ny h&#237;v&#225;sa<a class="anchor-link" href="#1.2.-F&#252;ggv&#233;ny-h&#237;v&#225;sa">&#182;</a></h1><p>Ha kíváncsiak vagyunk az eredményre:</p>
+<h1 id="F&#252;ggv&#233;ny-h&#237;v&#225;sa">F&#252;ggv&#233;ny h&#237;v&#225;sa<a class="anchor-link" href="#F&#252;ggv&#233;ny-h&#237;v&#225;sa">&#182;</a></h1><p>Ha kíváncsiak vagyunk az eredményre:</p>
 <div class="highlight"><pre><span></span><span class="n">valtozo</span> <span class="o">=</span> <span class="n">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">paramX</span><span class="p">)</span>
 </pre></div>
 <p>Ha csak a mellékhatás miatt hívjuk:</p>
@@ -13280,17 +13280,17 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1.3.-Alap&#233;rtelmezett-param&#233;terek">1.3. Alap&#233;rtelmezett param&#233;terek<a class="anchor-link" href="#1.3.-Alap&#233;rtelmezett-param&#233;terek">&#182;</a></h1><p>Definíció:</p>
+<h1 id="Alap&#233;rtelmezett-param&#233;terek">Alap&#233;rtelmezett param&#233;terek<a class="anchor-link" href="#Alap&#233;rtelmezett-param&#233;terek">&#182;</a></h1><p>Definíció:</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">...</span> <span class="n">defparam1</span><span class="o">=</span><span class="n">val1</span><span class="p">,</span> <span class="n">defparam2</span><span class="o">=</span><span class="n">val2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
 </pre></div>
 <p>Hívás:</p>
-<div class="highlight"><pre><span></span><span class="n">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">)</span>
-<span class="c1"># vagy pozíció szerint</span>
+<div class="highlight"><pre><span></span><span class="c1"># pozíció szerint</span>
+<span class="n">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">)</span>
 <span class="n">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="n">val1</span><span class="p">)</span>
-<span class="c1"># vagy</span>
 <span class="n">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">)</span>
-<span class="c1"># vagy nev szerint</span>
+<span class="c1"># vagy nev szerint (csak a pozíció szerintiek után)</span>
 <span class="n">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="n">defparam2</span><span class="o">=</span><span class="n">val2</span><span class="p">)</span>
+<span class="c1"># rossz: fuggvenynev(defparam2=val2, param1, param2)</span>
 </pre></div>
 
 </div>
@@ -13299,7 +13299,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1.4.-First-class-citizen">1.4. First class citizen<a class="anchor-link" href="#1.4.-First-class-citizen">&#182;</a></h1><ul>
+<h1 id="First-class-citizen">First class citizen<a class="anchor-link" href="#First-class-citizen">&#182;</a></h1><ul>
 <li>átadható más függvénynek paraméterként</li>
 <li>lehet függvény visszatérési értéke</li>
 <li>változónak lehet értékül adni</li>
@@ -13312,6 +13312,26 @@ a.anchor-link {
 
 <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">get_value</span><span class="p">)</span>
 <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">get_value</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Lambda-f&#252;ggv&#233;nyek">Lambda-f&#252;ggv&#233;nyek<a class="anchor-link" href="#Lambda-f&#252;ggv&#233;nyek">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">...</span> <span class="p">:</span> <span class="n">return_value</span>
+</pre></div>
+<ul>
+<li>rövid (egy soros), névtelen függvek</li>
+<li>általában egyszer használjuk, más függvény paramétereként</li>
+<li>ha nagyon szeretnénk többször használni, akkor eltárolhatjuk egy változóban (de inkább ne)</li>
+<li>nincs <code>return</code>, de a <code>:</code> utáni kifejezés kiértékelődik és rendes visszatérési érték adódik vissza</li>
+</ul>
+<p>Példa (<code>sorted()</code>, még egyszerűbben):</p>
+<div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+
+<span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
 </div>
