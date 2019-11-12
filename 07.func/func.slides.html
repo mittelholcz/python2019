@@ -13208,6 +13208,130 @@ a.anchor-link {
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Restanci&#225;k,-tanuls&#225;gok">Restanci&#225;k, tanuls&#225;gok<a class="anchor-link" href="#Restanci&#225;k,-tanuls&#225;gok">&#182;</a></h1><ul>
+<li>programozási tételek:<ul>
+<li>összegzés</li>
+<li>számlálás / kiválasztás</li>
+<li>maximum keresés</li>
+<li>felétételes maximumkeresés</li>
+</ul>
+</li>
+<li>mi legyen egyszerű: a kód vagy a használt szerkezetek (avagy a megfelelő típus kiválasztásáról)</li>
+<li>lista módosítása ciklusból</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Csin&#225;ljuk-meg-egy&#252;tt">Csin&#225;ljuk meg egy&#252;tt<a class="anchor-link" href="#Csin&#225;ljuk-meg-egy&#252;tt">&#182;</a></h1><ul>
+<li><em>Legyen egy egész számokat tartalmazó listánk. Növeljük meg a lista minden elemét eggyel!</em> (<code>range()</code>, <code>enumerate()</code>)</li>
+<li><em>Legyen egy szövegünk. Melyik a legtöbbféle betűt tartalmazó szava?</em></li>
+<li><em>Legyen egy szövegünk. Számoljunk szógyakoriságot. Az eredményt tároljuk egy szótárban.</em></li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.1.-F&#252;ggv&#233;ny-defin&#237;ci&#243;ja">1.1. F&#252;ggv&#233;ny defin&#237;ci&#243;ja<a class="anchor-link" href="#1.1.-F&#252;ggv&#233;ny-defin&#237;ci&#243;ja">&#182;</a></h1><p><br></p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">paramX</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">utasitas1</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">utasitas2</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+</pre></div>
+<ul>
+<li>a <code>def</code> kulcsszó jelenti, hogy itt egy függvény definíciója következik</li>
+<li>a függvény neve bármilyen érvényes változónév lehet: betű, alulvonás, szám (de számmal nem kezdődhet)</li>
+<li>a paraméterek nevei érvényes változónevek lehetnek és csak a függvényben érvényesek (külső változók el lesznek "takarva")</li>
+<li>utasítások: bármilyen érvényes python utasítás lehet egy függvényben</li>
+<li>a <code>return</code> opcionális, ha nincs, akkor is van, és visszatérési érték <code>None</code> lesz </li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.2.-F&#252;ggv&#233;ny-h&#237;v&#225;sa">1.2. F&#252;ggv&#233;ny h&#237;v&#225;sa<a class="anchor-link" href="#1.2.-F&#252;ggv&#233;ny-h&#237;v&#225;sa">&#182;</a></h1><p>Ha kíváncsiak vagyunk az eredményre:</p>
+<div class="highlight"><pre><span></span><span class="n">valtozo</span> <span class="o">=</span> <span class="n">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">paramX</span><span class="p">)</span>
+</pre></div>
+<p>Ha csak a mellékhatás miatt hívjuk:</p>
+<div class="highlight"><pre><span></span><span class="n">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">paramX</span><span class="p">)</span>
+</pre></div>
+<ul>
+<li>a paraméterek lehetnek változók de közvetlen értékek is</li>
+<li>ha változók, akkor nem kell hogy azonos nevűek legyenek a függvény definíciójában lévőkkel</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.3.-Alap&#233;rtelmezett-param&#233;terek">1.3. Alap&#233;rtelmezett param&#233;terek<a class="anchor-link" href="#1.3.-Alap&#233;rtelmezett-param&#233;terek">&#182;</a></h1><p>Definíció:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">...</span> <span class="n">defparam1</span><span class="o">=</span><span class="n">val1</span><span class="p">,</span> <span class="n">defparam2</span><span class="o">=</span><span class="n">val2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+</pre></div>
+<p>Hívás:</p>
+<div class="highlight"><pre><span></span><span class="n">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">)</span>
+<span class="c1"># vagy pozíció szerint</span>
+<span class="n">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="n">val1</span><span class="p">)</span>
+<span class="c1"># vagy</span>
+<span class="n">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">)</span>
+<span class="c1"># vagy nev szerint</span>
+<span class="n">fuggvenynev</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="n">defparam2</span><span class="o">=</span><span class="n">val2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.4.-First-class-citizen">1.4. First class citizen<a class="anchor-link" href="#1.4.-First-class-citizen">&#182;</a></h1><ul>
+<li>átadható más függvénynek paraméterként</li>
+<li>lehet függvény visszatérési értéke</li>
+<li>változónak lehet értékül adni</li>
+</ul>
+<p>Példa paraméterként átadásra:</p>
+<div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">get_value</span><span class="p">)</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">get_value</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><ul>
+<li>Készítsetek függvényekből álló programot, ami szógyakoriságot számol:<ul>
+<li>legyen benne egy függvény, ami tetszőleges szöveget fogad és egy szótárat ad vissza, amiben a szavak gyakorisásga van</li>
+<li>legyen benne egy függvény, ami egy gyakorisági szótárat fogad és <code>(szó, előfordulás)</code> tuple-ök listáját adja vissza előfordulás szerint csökkenő sorrendbe rendezve</li>
+<li>legyen egy függvény, ami a kiírást intézi</li>
+</ul>
+</li>
+<li>Készítsetek egy függvényt, ami egy tetszőleges sorozatot és egy igaz/hamissal visszatérő tetszőleges függvényt fogad. Térjen vissza azzal a legnagyobb elemmel, amire igaz a függvény</li>
+</ul>
+
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
