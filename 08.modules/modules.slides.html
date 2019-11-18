@@ -13202,7 +13202,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Modulok">Modulok<a class="anchor-link" href="#Modulok">&#182;</a></h1><hr>
+<h1 id="M&#225;sol&#225;s,-modulok,-f&#225;jlkezel&#233;s">M&#225;sol&#225;s, modulok, f&#225;jlkezel&#233;s<a class="anchor-link" href="#M&#225;sol&#225;s,-modulok,-f&#225;jlkezel&#233;s">&#182;</a></h1><hr>
 <p>(2019. 11. 19. – 8. óra)</p>
 <p>Mittelholcz Iván</p>
 
@@ -13365,10 +13365,16 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="2.5.-Saj&#225;t-modulok-&#233;s-csomagok-&#237;r&#225;sa">2.5. Saj&#225;t modulok &#233;s csomagok &#237;r&#225;sa<a class="anchor-link" href="#2.5.-Saj&#225;t-modulok-&#233;s-csomagok-&#237;r&#225;sa">&#182;</a></h1><ul>
-<li><em>modul</em>: fájl, python kóddal</li>
-<li><em>csomag</em>: könyvtár, python fájlokkal és egy (többnyire üres) <code>__init__.py</code> fájl.</li>
+<li><em>modul</em>: Fájl, python kóddal. Importáláskor a fájlnevet adjuk meg, a '.py' végződés nélkül.<ul>
+<li>Ha elérési utat kell megadnunk, akkor a <code>/</code> helyett a <code>.</code>-ot használjuk szeparátorként (<code>import a.b</code>).</li>
+</ul>
+</li>
+<li><em>csomag</em>: könyvtár, python fájlokkal és egy <code>__init__.py</code> fájl.<ul>
+<li>Az <code>__init__.py</code> maradhat üresen is (ekkor a fájlokat külön-külön kell importálni), de definiálhatjuk az <code>__all__</code> válozóban a csomagszinten delegálandó válozók, függvények, egyebek listáját (l. az <code>src/</code> könyvtárat)</li>
+</ul>
+</li>
 <li>olvasnivaló, ha szeretnénk ilyet csinálni: <a href="https://docs.python.org/3/tutorial/modules.html">https://docs.python.org/3/tutorial/modules.html</a></li>
-<li>olvasnivaló, ha saját <em>pip</em>-pel telepíthető csomagot szeretnénk csinálni: <a href="https://packaging.python.org/tutorials/packaging-projects/">https://packaging.python.org/tutorials/packaging-projects/</a></li>
+<li>olvasnivaló, ha saját <em>pip</em>-pel telepíthető csomagot szeretnénk csinálni: <a href="https://packaging.python.org/tutorials/packaging-projects/">https://packaging.python.org/tutorials/packaging-projects/</a> (haladó)</li>
 </ul>
 
 </div>
@@ -13405,7 +13411,7 @@ a.anchor-link {
 </pre></div>
 <p>Szöveges fájl bejárása közvetlenül:</p>
 <div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">fun</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="n">process</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 </pre></div>
 <p>Fájl bezárása:</p>
 <div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
@@ -13440,7 +13446,7 @@ a.anchor-link {
 <h1 id="3.3.-with-&#8211;-avagy-a-close()-megsp&#243;rol&#225;sa">3.3. <code>with</code> &#8211; avagy a <code>close()</code> megsp&#243;rol&#225;sa<a class="anchor-link" href="#3.3.-with-&#8211;-avagy-a-close()-megsp&#243;rol&#225;sa">&#182;</a></h1><p>(Úgy hívják, hogy kontextus menedzser...)</p>
 <div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">inp</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">inp</span><span class="p">:</span>
-        <span class="n">process_line</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="n">process</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
         <span class="c1"># ...</span>
 </pre></div>
 
@@ -13450,12 +13456,12 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3.4.-stdin,-stdout,-stderr">3.4. stdin, stdout, stderr<a class="anchor-link" href="#3.4.-stdin,-stdout,-stderr">&#182;</a></h1><p>Nem kell megnyitni, csak importálni!</p>
+<h1 id="3.4.-stdin,-stdout,-stderr">3.4. stdin, stdout, stderr<a class="anchor-link" href="#3.4.-stdin,-stdout,-stderr">&#182;</a></h1><p>Nem kell megnyitni (és bezárni sem), csak importálni!</p>
 <p>Olvasás a stdin-ről:</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="p">:</span>
-    <span class="n">process_line</span><span class="p">()</span>
+    <span class="n">process</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 </pre></div>
 <p>Írás:</p>
 <div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
@@ -13471,7 +13477,12 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1>
+<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><ol>
+<li>Írjatok egy parancssorból futtatható programot ami a stdin-ról olvas, a stdout-ra ír, és szógyakoriságot számol (csökkenő sorrend)!</li>
+<li>Ugyan ez, de lehessen parancssorból is futtatni és modulként is importálni.</li>
+<li>Ugyan ez, de paranccsoros futtatásnál lehessen neki fájlt megadni és csak akkor olvasson a stdin-ről, ha nincs fájlnév megadva neki.</li>
+</ol>
+
 </div>
 </div>
 </div></section></section><section><section>
