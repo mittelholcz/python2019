@@ -12,3 +12,4 @@
 | [5.](https://github.com/mittelholcz/python2019/blob/master/05.comp/) | Összetett adattípusok |
 | [6.](https://github.com/mittelholcz/python2019/blob/master/06.ctrl/) | Vezérlési szerkezetek |
 | [7.](https://github.com/mittelholcz/python2019/blob/master/07.func/) | Függvények |
+| [8.](https://github.com/mittelholcz/python2019/blob/master/08.modules/) | Modulok |
