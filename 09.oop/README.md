@@ -1,4 +1,4 @@
-# Objektum orientált programozás
+# Objektumorientált programozás
 
 (2019. 11. 26. – 9. óra)
 
