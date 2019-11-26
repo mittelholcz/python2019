@@ -13202,8 +13202,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Objektumorient&#225;lt-programoz&#225;s">Objektumorient&#225;lt programoz&#225;s<a class="anchor-link" href="#Objektumorient&#225;lt-programoz&#225;s">&#182;</a></h1><hr>
-<p>(2019. 11. 26. – 9. óra)</p>
+<h1 id="Objektumorient&#225;lt-programoz&#225;s-&#233;s-egyebek">Objektumorient&#225;lt programoz&#225;s &#233;s egyebek<a class="anchor-link" href="#Objektumorient&#225;lt-programoz&#225;s-&#233;s-egyebek">&#182;</a></h1><hr>
+<p>(2019. 12. 03. – 10. óra)</p>
 <p>Mittelholcz Iván</p>
 
 </div>
@@ -13212,7 +13212,14 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Felhaszn&#225;l&#243;i-t&#237;pusok">Felhaszn&#225;l&#243;i t&#237;pusok<a class="anchor-link" href="#Felhaszn&#225;l&#243;i-t&#237;pusok">&#182;</a></h1><p>Alapfogalmak:</p>
+<h1 id="1.-Objektumorient&#225;lt-programoz&#225;s">1. Objektumorient&#225;lt programoz&#225;s<a class="anchor-link" href="#1.-Objektumorient&#225;lt-programoz&#225;s">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.1.-Felhaszn&#225;l&#243;i-t&#237;pusok">1.1. Felhaszn&#225;l&#243;i t&#237;pusok<a class="anchor-link" href="#1.1.-Felhaszn&#225;l&#243;i-t&#237;pusok">&#182;</a></h1><p>Alapfogalmak:</p>
 <ul>
 <li>Osztály (class, type): Dolgok egy modellezendő csoportja (számok, szavak, emberek, épületek, akármi).</li>
 <li>Objektum (object, instance): Osztályok példányai vagy egyedei.</li>
@@ -13248,16 +13255,90 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="P&#233;lda">P&#233;lda<a class="anchor-link" href="#P&#233;lda">&#182;</a></h1><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<h1 id="1.2.-P&#233;lda">1.2. P&#233;lda<a class="anchor-link" href="#1.2.-P&#233;lda">&#182;</a></h1><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+
 <span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+
     <span class="c1"># konstruktor:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="p">:</span> <span class="n">date</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">date</span>
 
     <span class="k">def</span> <span class="nf">get_age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span>
+
+<span class="n">mari</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;Mária&#39;</span><span class="p">,</span> <span class="mi">1969</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;{0} {1}-ben született.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mari</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">mari</span><span class="o">.</span><span class="n">year</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;{0} {1} éves.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mari</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">mari</span><span class="o">.</span><span class="n">get_age</span><span class="p">()))</span>
 </pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.3.-Szintaxis">1.3. Szintaxis<a class="anchor-link" href="#1.3.-Szintaxis">&#182;</a></h1><ul>
+<li><p>definíció: <code>class</code> + név + <code>:</code>, alatta indentálva a változók és metódusok</p>
+</li>
+<li><p>példányfüggvény:</p>
+<ul>
+<li>definiálása: Sima függvénydefiníció a <code>class</code> alatt indentálva. Első paramétere legyen mindig a <code>self</code>!</li>
+<li>hívása: Példányon lehet meghívni, ponttal elválasztva (<code>peldany.metodus(...)</code>). Az első paramétert (<code>self</code>) soha nem kell megadni (az a példány maga – olyan, mintha azt mondanák: <code>metodus(peldany, ...)</code>).</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.3.-Szintaxis-(folytat&#225;s)">1.3. Szintaxis (folytat&#225;s)<a class="anchor-link" href="#1.3.-Szintaxis-(folytat&#225;s)">&#182;</a></h1><ul>
+<li><p>példányváltozó:</p>
+<ul>
+<li>definiálása: <em>konstruktor</em> függvényben adjuk meg (<code>def __init__(self, x): self.x = x</code>)</li>
+<li>hivatkozás rá: Példányon, ponttal elválasztva (<code>peldany.x</code> vagy értékadásnál <code>peldany.x = 11</code>)</li>
+</ul>
+</li>
+<li><p>példányosítás: Az osztály nevét függvényként hívjuk, a konstruktor paramétereivel (<code>self</code> nélkül).</p>
+<div class="highlight"><pre><span></span><span class="n">Osztaly</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">)</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.4.-&#214;r&#246;kl&#337;d&#233;s">1.4. &#214;r&#246;kl&#337;d&#233;s<a class="anchor-link" href="#1.4.-&#214;r&#246;kl&#337;d&#233;s">&#182;</a></h1><p>Egy osztály alosztálya, specializált részhalmaza (pl. szó–ige, ember–nyelvész, stb.) örökli az alap osztály a változóit és metódusait. Szokás <em>is a</em> relációnak is hívni, szemben a példányváltozók jelentette <em>has a</em> relációval.</p>
+<p>Szintaxis: Osztály definiálásánál az osztály neve után zárójelben szerepel az ős osztály. Az ősre a <code>super()</code> függvénnyel lehet hivatkozni.</p>
+<p>Példa:</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Linguist</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">spec</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spec</span> <span class="o">=</span> <span class="n">spec</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;{0} {1} éves, szakterülete a {2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_age</span><span class="p">())</span>
+
+<span class="n">chom</span> <span class="o">=</span> <span class="n">Linguist</span><span class="p">(</span><span class="s1">&#39;Chomsky&#39;</span><span class="p">,</span> <span class="mi">1928</span><span class="p">,</span> <span class="s1">&#39;szintaxis&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">chom</span><span class="o">.</span><span class="n">get_info</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.5.-Irodalom">1.5. Irodalom<a class="anchor-link" href="#1.5.-Irodalom">&#182;</a></h1><ul>
+<li><a href="https://docs.python.org/3/tutorial/classes.html">https://docs.python.org/3/tutorial/classes.html</a></li>
+<li><a href="https://realpython.com/python3-object-oriented-programming/">https://realpython.com/python3-object-oriented-programming/</a></li>
+</ul>
 
 </div>
 </div>
@@ -13265,19 +13346,87 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#214;r&#246;kl&#337;d&#233;s">&#214;r&#246;kl&#337;d&#233;s<a class="anchor-link" href="#&#214;r&#246;kl&#337;d&#233;s">&#182;</a></h1><p>Egy osztály alosztálya, specializált részhalmaza (pl. szó–ige, ember–nyelvész, stb.) örökli az alap osztály a változóit és metódusait. Szokás <em>is a</em> relációnak is hívni, szemben a példányváltozók jelentette <em>has a</em> relációval.</p>
-<p>Szintaxis: Osztály definiálásánál az osztály neve után zárójelben szerepel az ős osztály.</p>
+<h1 id="2.-Vegyes-apr&#243;s&#225;gok">2. Vegyes apr&#243;s&#225;gok<a class="anchor-link" href="#2.-Vegyes-apr&#243;s&#225;gok">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.1.-Stringek-form&#225;z&#225;sa">2.1. Stringek form&#225;z&#225;sa<a class="anchor-link" href="#2.1.-Stringek-form&#225;z&#225;sa">&#182;</a></h1><ul>
+<li>Stringekbe bármilyen érték illeszthetó a <code>str.format()</code> metódussal.</li>
+<li>A stringben az illesztés helyét kapcsols zárójelekkel + sorszámmal (0-val kezdünk) jelöljük.</li>
+<li>A <code>format()</code> paramétereiként felsorolt értékek behelyettesítődnek a stringbe, a #0 helyére a format 1. paramétere kerül, az #1 helyére a 2. paraméter kerül, sít.</li>
+</ul>
 <p>Példa:</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Base</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Base&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">20</span>
 
-<span class="k">class</span> <span class="nc">Deriv</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
-    <span class="k">pass</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;{0} meg {1} az {2}. A {0} szép szám!&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">))</span>
+<span class="c1"># output: &#39;10 meg 20 az 30. A 10 szép szám!&#39;</span>
+</pre></div>
+<ul>
+<li>További formázási lehetőségek: <a href="https://docs.python.org/3/library/string.html#formatstrings">https://docs.python.org/3/library/string.html#formatstrings</a></li>
+<li><em>f-string</em>ek (3.7 vagy újabb python kell hozzá): <a href="https://realpython.com/python-f-strings/">https://realpython.com/python-f-strings/</a></li>
+</ul>
 
-<span class="n">der</span> <span class="o">=</span> <span class="n">Deriv</span><span class="p">()</span>
-<span class="n">der</span><span class="o">.</span><span class="n">fun</span><span class="p">()</span>
-<span class="c1"># Base</span>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.2.-List&#225;k,-halmazok-&#233;s-sz&#243;t&#225;rak-r&#246;viden">2.2. List&#225;k, halmazok &#233;s sz&#243;t&#225;rak r&#246;viden<a class="anchor-link" href="#2.2.-List&#225;k,-halmazok-&#233;s-sz&#243;t&#225;rak-r&#246;viden">&#182;</a></h1><p>Listák:</p>
+<div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="c1"># szűrés (csak páratlanok):</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+<span class="c1"># leképezés (négyzetszámokra):</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l2</span><span class="p">]</span>
+<span class="c1"># egy lépésben:</span>
+<span class="n">l4</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Halmazok és szótárak hasonlóan:</p>
+<div class="highlight"><pre><span></span><span class="c1"># szöveg szavainak halmaza:</span>
+<span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()}</span>
+<span class="c1"># szavak és hosszúságaik szótára:</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="n">w</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()}</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.3.-Dokument&#225;ci&#243;s-stringek">2.3. Dokument&#225;ci&#243;s stringek<a class="anchor-link" href="#2.3.-Dokument&#225;ci&#243;s-stringek">&#182;</a></h1><ul>
+<li>Függvényeket, modulokat és osztályokat lehet és hasznos dokumentálni.</li>
+<li>Ehhez egy közvetlenül a definíció után következő név nélküli stringet lehet használni.<ul>
+<li>A dokumentáció 1. sora tartalmazza a függvény/osztály/modul rövid leírását.</li>
+<li>Ha részletezni akarjuk, akkor üres sor, majd lehet részletezni a működést, lehet pl. a paraméterekről és a visszatérési értékről írni (opcionális)</li>
+</ul>
+</li>
+<li>Több soros stringet hármas idézőjelpár között lehet megadni (<code>'''</code> vagy <code>"""</code>). Ezt máshol is lehet használni (pl. változó megadásánál).</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fun</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Kiírja, hogy &#39;fun&#39;.</span>
+
+<span class="sd">    Nincs se paraméter, se visszatérési érték.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;fun&#39;</span><span class="p">)</span>
+
+<span class="c1"># interaktív python-nál hasznos (less-szerű felület)</span>
+<span class="n">help</span><span class="p">(</span><span class="n">fun</span><span class="p">)</span>
+
+<span class="c1"># sima print, bármikor használható</span>
+<span class="k">print</span><span class="p">(</span><span class="n">fun</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 </pre></div>
 
 </div>
