@@ -14,4 +14,5 @@
 | [7.](https://github.com/mittelholcz/python2019/blob/master/07.func/)    | Függvények |
 | [8.](https://github.com/mittelholcz/python2019/blob/master/08.modules/) | Másolás, modulok, fájlkezelés |
 | 9.                                                                      | Gyakrolás |
-| [10.](https://github.com/mittelholcz/python2019/blob/master/10.oop/)     | Objektumorientált programozás, egyebek |
+| [10.](https://github.com/mittelholcz/python2019/blob/master/10.oop/)    | Objektumorientált programozás, egyebek |
+| [11.](https://github.com/mittelholcz/python2019/blob/master/11.files/)  | Reguláris kifejezések, CSV / TSV, XML / HTML |
