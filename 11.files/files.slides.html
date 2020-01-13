@@ -13409,7 +13409,64 @@ Nózi    vizsla  14</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3.-XML-/-HTML">3. XML / HTML<a class="anchor-link" href="#3.-XML-/-HTML">&#182;</a></h1><p>TODO</p>
+<h1 id="3.-XML-/-HTML">3. XML / HTML<a class="anchor-link" href="#3.-XML-/-HTML">&#182;</a></h1><p>Példa (l. <a href="https://hu.wikipedia.org/wiki/XML">https://hu.wikipedia.org/wiki/XML</a>):</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;Recept</span> <span class="na">név=</span><span class="s">&quot;kenyér&quot;</span> <span class="na">elk_idő=</span><span class="s">&quot;5 perc&quot;</span> <span class="na">sütés_idő=</span><span class="s">&quot;3 óra&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;cím&gt;</span>Egyszerű kenyér<span class="nt">&lt;/cím&gt;</span>
+  <span class="nt">&lt;összetevő</span> <span class="na">mennyiség=</span><span class="s">&quot;3&quot;</span> <span class="na">egység=</span><span class="s">&quot;csésze&quot;</span><span class="nt">&gt;</span>Liszt<span class="nt">&lt;/összetevő&gt;</span>
+  <span class="nt">&lt;összetevő</span> <span class="na">mennyiség=</span><span class="s">&quot;10&quot;</span> <span class="na">egység=</span><span class="s">&quot;dekagramm&quot;</span><span class="nt">&gt;</span>Élesztő<span class="nt">&lt;/összetevő&gt;</span>
+  <span class="nt">&lt;összetevő</span> <span class="na">mennyiség=</span><span class="s">&quot;1.5&quot;</span> <span class="na">egység=</span><span class="s">&quot;csésze&quot;</span><span class="nt">&gt;</span>Meleg víz<span class="nt">&lt;/összetevő&gt;</span>
+  <span class="nt">&lt;összetevő</span> <span class="na">mennyiség=</span><span class="s">&quot;1&quot;</span> <span class="na">egység=</span><span class="s">&quot;teáskanál&quot;</span><span class="nt">&gt;</span>Só<span class="nt">&lt;/összetevő&gt;</span>
+  <span class="nt">&lt;Utasítások&gt;</span>
+    <span class="nt">&lt;lépés&gt;</span>Keverj össze minden összetevőt, aztán jól gyúrd össze!<span class="nt">&lt;/lépés&gt;</span>
+    <span class="nt">&lt;lépés&gt;</span>Fedd le ruhával és hagyd pihenni egy óráig!<span class="nt">&lt;/lépés&gt;</span>
+    <span class="nt">&lt;lépés&gt;</span>Gyúrd össze újra, aztán süsd meg a sütőben!<span class="nt">&lt;/lépés&gt;</span>
+  <span class="nt">&lt;/Utasítások&gt;</span>
+<span class="nt">&lt;/Recept&gt;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.1.-Szintaxis">3.1. Szintaxis<a class="anchor-link" href="#3.1.-Szintaxis">&#182;</a></h1><ul>
+<li>csak séma: jelölő nyelv, bármit leírhat (vs HMTL), nincsenek előre definiált tagek</li>
+<li>fa szerkezet: egy gyökér elem, minden más az ő "gyereke", vagy a gyerekének a gyereke, sít.</li>
+<li><p>elemek: minden, ami "fel van címkézve", pl.</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;...&gt;</span>liszt<span class="nt">&lt;/...&gt;</span>
+</pre></div>
+</li>
+<li><p>tagek: címkék az elemeken, kötelező lezárni őket, nem fedhetnek át, pl.</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;összetevő&gt;</span>...<span class="nt">&lt;/összetevő&gt;</span>
+</pre></div>
+</li>
+<li><p>attributumok: plusz információk (kulcs-érték párok) a nyitótageken belül, pl.</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;...</span> <span class="na">egység=</span><span class="s">&quot;csésze&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/...&gt;</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 
 </div>
 </div>
@@ -13417,7 +13474,7 @@ Nózi    vizsla  14</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="K&#246;sz&#246;n&#246;m-a-figyelmet">K&#246;sz&#246;n&#246;m a figyelmet<a class="anchor-link" href="#K&#246;sz&#246;n&#246;m-a-figyelmet">&#182;</a></h1>
+<h1 id="K&#246;sz&#246;n&#246;m-a-figyelmet!">K&#246;sz&#246;n&#246;m a figyelmet!<a class="anchor-link" href="#K&#246;sz&#246;n&#246;m-a-figyelmet!">&#182;</a></h1>
 </div>
 </div>
 </div></section></section>
