@@ -1,0 +1,12 @@
+<Recept név="kenyér" elk_idő="5 perc" sütés_idő="3 óra">
+  <cím>Egyszerű kenyér</cím>
+  <összetevő mennyiség="3" egység="csésze">Liszt</összetevő>
+  <összetevő mennyiség="10" egység="dekagramm">Élesztő</összetevő>
+  <összetevő mennyiség="1.5" egység="csésze">Meleg víz</összetevő>
+  <összetevő mennyiség="1" egység="teáskanál">Só</összetevő>
+  <Utasítások>
+    <lépés>Keverj össze minden összetevőt, aztán jól gyúrd össze!</lépés>
+    <lépés>Fedd le ruhával és hagyd pihenni egy óráig!</lépés>
+    <lépés>Gyúrd össze újra, aztán süsd meg a sütőben!</lépés>
+  </Utasítások>
+</Recept>

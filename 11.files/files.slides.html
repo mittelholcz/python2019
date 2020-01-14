@@ -13432,16 +13432,16 @@ Nózi    vizsla  14</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="3.1.-Szintaxis">3.1. Szintaxis<a class="anchor-link" href="#3.1.-Szintaxis">&#182;</a></h1><ul>
 <li>csak séma: jelölő nyelv, bármit leírhat (vs HMTL), nincsenek előre definiált tagek</li>
-<li>fa szerkezet: egy gyökér elem, minden más az ő "gyereke", vagy a gyerekének a gyereke, sít.</li>
-<li><p>elemek: minden, ami "fel van címkézve", pl.</p>
+<li>fa struktúra: egy gyökér elem, minden más az ő "gyereke", vagy a gyerekének a gyereke, sít.</li>
+<li><p><em>elem</em>: minden, ami "fel van címkézve", pl.</p>
 <div class="highlight"><pre><span></span><span class="nt">&lt;...&gt;</span>liszt<span class="nt">&lt;/...&gt;</span>
 </pre></div>
 </li>
-<li><p>tagek: címkék az elemeken, kötelező lezárni őket, nem fedhetnek át, pl.</p>
+<li><p><em>tag</em>: címkék az elemeken, kötelező lezárni őket, nem fedhetnek át, pl.</p>
 <div class="highlight"><pre><span></span><span class="nt">&lt;összetevő&gt;</span>...<span class="nt">&lt;/összetevő&gt;</span>
 </pre></div>
 </li>
-<li><p>attributumok: plusz információk (kulcs-érték párok) a nyitótageken belül, pl.</p>
+<li><p><em>attribútum</em>: plusz információk (kulcs-érték párok) a nyitótageken belül, pl.</p>
 <div class="highlight"><pre><span></span><span class="nt">&lt;...</span> <span class="na">egység=</span><span class="s">&quot;csésze&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/...&gt;</span>
 </pre></div>
 </li>
@@ -13453,6 +13453,20 @@ Nózi    vizsla  14</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.2.-Beautifulsoup-alapok">3.2. Beautifulsoup alapok<a class="anchor-link" href="#3.2.-Beautifulsoup-alapok">&#182;</a></h1><p>Dokumentáció: <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">https://www.crummy.com/software/BeautifulSoup/bs4/doc/</a></p>
+<p>Telepítés (Beautifulsoup és xml parser):</p>
+<div class="highlight"><pre><span></span>pip install beautifulsoup4 lxml
+</pre></div>
+<p>Leveskészítés stringből (xml):</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span> <span class="k">as</span> <span class="n">BS</span>
+<span class="n">xml</span> <span class="o">=</span> <span class="s1">&#39;&lt;összetevő mennyiség=&quot;3&quot; egység=&quot;csésze&quot;&gt;Liszt&lt;/összetevő&gt;&#39;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BS</span><span class="p">(</span><span class="n">xml</span><span class="p">,</span> <span class="s1">&#39;xml&#39;</span><span class="p">)</span>
+</pre></div>
+<p>Leves fájlból (xml):</p>
+<div class="highlight"><pre><span></span><span class="n">inp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;recept.xml&#39;</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BS</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="s1">&#39;xml&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+</pre></div>
 
 </div>
 </div>
@@ -13460,6 +13474,16 @@ Nózi    vizsla  14</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.3.-Tagek">3.3. Tagek<a class="anchor-link" href="#3.3.-Tagek">&#182;</a></h1><p>Első a fában: <code>soup.tag</code></p>
+<p>Példa</p>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">cím</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">összetevő</span><span class="p">)</span>
+</pre></div>
+<p>Összes a fában: <code>soup.find_all(tag)</code> (listaszerű)</p>
+<p>Példa:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">osszetevo</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;összetevő&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">osszetevo</span><span class="o">.</span><span class="n">get_text</span><span class="p">())</span>
+</pre></div>
 
 </div>
 </div>
@@ -13467,6 +13491,32 @@ Nózi    vizsla  14</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.4.-Tagek-(folytat&#225;s)">3.4. Tagek (folytat&#225;s)<a class="anchor-link" href="#3.4.-Tagek-(folytat&#225;s)">&#182;</a></h1><p>Tag szöveges tartalma (elem): <code>tag.get_text()</code></p>
+<p>Példa:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">osszetevo</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;összetevő&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">osszetevo</span><span class="o">.</span><span class="n">get_text</span><span class="p">())</span>
+</pre></div>
+<p>Tag attribútumai: <code>tag.attrs</code> (dict)</p>
+<p>Példa:</p>
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">Recept</span><span class="o">.</span><span class="n">attrs</span>
+</pre></div>
+<p>Egy attribútum értéke: <code>tag['attribútum']</code> (str)</p>
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">Recept</span><span class="p">[</span><span class="s1">&#39;név&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.5.-Feladatok">3.5. Feladatok<a class="anchor-link" href="#3.5.-Feladatok">&#182;</a></h1><p>Kiinduló pont a <code>recept.xml</code> fájl.</p>
+<ul>
+<li>Hány összetevő kell a kenyérhez?</li>
+<li>Mi a mértékegysége a második összetevőnek?</li>
+<li>Mi az utolsó utasítás?</li>
+<li>Hány teáskanál 'Só' kell a kenyérhez? (Tegyük fel, hogy nem tudjuk, hányadik összetevő a 'Só'!)</li>
+</ul>
 
 </div>
 </div>
