@@ -17,3 +17,4 @@
 | [10.](https://github.com/mittelholcz/python2019/blob/master/10.oop/)    | Objektumorientált programozás, egyebek |
 | [11.](https://github.com/mittelholcz/python2019/blob/master/11.files/)  | Reguláris kifejezések, CSV / TSV, XML / HTML |
 | [12.](https://github.com/mittelholcz/python2019/blob/master/12.jupyter/)  | IPython, Jupyter notebook |
+| [13.](https://github.com/mittelholcz/python2019/blob/master/13.pandas/)  | Pandas |
