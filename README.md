@@ -18,3 +18,4 @@
 | [11.](https://github.com/mittelholcz/python2019/blob/master/11.files/)  | Reguláris kifejezések, CSV / TSV, XML / HTML |
 | [12.](https://github.com/mittelholcz/python2019/blob/master/12.jupyter/)  | IPython, Jupyter notebook |
 | [13.](https://github.com/mittelholcz/python2019/blob/master/13.pandas/)  | Pandas |
+| [14.](https://github.com/mittelholcz/python2019/blob/master/14.pandas2/)  | Csoportosítás, korreláció, vizualizáció |
